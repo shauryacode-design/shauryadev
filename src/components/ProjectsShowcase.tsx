@@ -2,8 +2,21 @@
 
 import { useState } from "react";
 
+const handleClickH = () => {
+    // Optional: Add analytics or logic here
+    window.location.href = 'https://hiremind-lilac.vercel.app/login';
+  };
+const handleClickP = () => {
+    // Optional: Add analytics or logic here
+    window.location.href = 'https://pathpilot-taupe.vercel.app/';
+  };
+const handleClickC = () => {
+    // Optional: Add analytics or logic here
+    window.location.href = 'https://complaint-system-sepia-xi.vercel.app/';
+  };
 // placeholder cards: replace each with your real card component later
 function HiremindCard() {
+    
     return <div className="project-showcase">
         <div className="project-head">
             <span></span>
@@ -26,7 +39,7 @@ function HiremindCard() {
                     <div className="project-tech-capsule">Next.js</div>
                 </div>
                 <div className="project-btn">
-                    <button>Live Demo <img src="/link.svg" alt="" className="link-btn-img" /></button>
+                    <button onClick={handleClickH} type="button">Live Demo <img src="/link.svg" alt="" className="link-btn-img" /></button>
                 </div>
             </div>
         </div>
@@ -55,7 +68,7 @@ function PathPilotCard() {
 
                 </div>
                 <div className="project-btn">
-                    <button>Live Demo <img src="/link.svg" alt="" className="link-btn-img" /></button>
+                    <button onClick={handleClickP} type="button">Live Demo <img src="/link.svg" alt="" className="link-btn-img" /></button>
                 </div>
             </div>
         </div>
@@ -84,7 +97,7 @@ function AIcomplaintCard() {
                     <div className="project-tech-capsule">LangGraph</div>
                 </div>
                 <div className="project-btn">
-                    <button>Live Demo <img src="/link.svg" alt="" className="link-btn-img" /></button>
+                    <button onClick={handleClickC} type="button">Live Demo <img src="/link.svg" alt="" className="link-btn-img" /></button>
                 </div>
             </div>
         </div>
