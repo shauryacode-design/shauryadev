@@ -8,10 +8,10 @@ export default function Home() {
             </div>
             <div className="about-body">
                 <div className="about-left">
-                    <div className="about-profile-img">
+                    <div className="about-profile-img" data-reveal="left" suppressHydrationWarning>
                         <img src="/Shaurya.jpeg" alt="" />
                     </div>
-                    <div className="about-profile">
+                    <div className="about-profile" data-reveal="right" suppressHydrationWarning>
                         <h1>I turn ideas into <span className="blur-text expertise-text">AI-powered products</span> and <span className="blur-text expertise-text">interfaces.</span></h1>
                         <div className="about-profile-para">
                             <p>I'm <span className="blur-text about-para-blur">Shaurya Ojha</span>, an Applied <span className="blur-text about-para-blur">AI </span>and <span className="blur-text about-para-blur">Data Science</span> student at <span className="blur-text about-para-blur">IIT Jodhpur</span> with a strong interest in frontend development and AI-powered applications. I enjoy turning ideas into practical digital products, combining thoughtful UI design with intelligent features that solve real problems.</p>
@@ -25,7 +25,7 @@ export default function Home() {
                             <h3>Right now</h3>
                         </div>
                         <div className="about-right-body">
-                            <div className="about-right-list">
+                            <div className="about-right-list" data-reveal="up" data-reveal-delay="0" suppressHydrationWarning>
                                 <div className="about-list-dot">
                                     <div className="about-dots about-dot1"></div>
                                 </div>
@@ -35,7 +35,7 @@ export default function Home() {
                                     <p>Personal portfolio and new AI applications</p>
                                 </div>
                             </div>
-                            <div className="about-right-list">
+                            <div className="about-right-list" data-reveal="up" data-reveal-delay="120" suppressHydrationWarning>
                                 <div className="about-list-dot">
                                     <div className="about-dots about-dot2"></div>
                                 </div>
@@ -45,7 +45,7 @@ export default function Home() {
                                     <p>Backend systems, deployment and AI engineering</p>
                                 </div>
                             </div>
-                            <div className="about-right-list">
+                            <div className="about-right-list" data-reveal="up" data-reveal-delay="240" suppressHydrationWarning>
                                 <div className="about-list-dot">
                                     <div className="about-dots about-dot3"></div>
                                 </div>

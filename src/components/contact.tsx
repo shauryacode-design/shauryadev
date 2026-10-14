@@ -53,22 +53,25 @@ export default function Home() {
             </div>
             <div className="contact-body">
                 <div className="contact-text">
-                    <h1>Interested in talking? <br /> <span className="blur-text expertise-text">let&apos;s do it</span></h1>
+                    <h1 data-reveal="up" suppressHydrationWarning>Interested in talking? <br /> <span className="blur-text expertise-text">let&apos;s do it</span></h1>
                     <div className="contact-CTA">
-                        <button type="button" onClick={copyEmail} aria-live="polite">
+                        <button type="button" onClick={copyEmail} aria-live="polite" data-reveal="up" data-reveal-delay="150" suppressHydrationWarning>
                             {emailFeedback || "shauryaofficial06@gmail.com"}
                         </button>
                         <a
                             href="https://wa.me/919319649564?text=Hi%2C%20I%20came%20here%20from%20your%20Portfolio."
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-reveal="up"
+                            data-reveal-delay="150"
+                            suppressHydrationWarning
                         >
                             WhatsApp me
                         </a>
                     </div>
                 </div>
             </div>
-            <div className="contact-connect">
+            <div className="contact-connect" data-reveal="fade" suppressHydrationWarning>
                 <div className="contact-rights">
                     <p>© 2026 Shaurya</p>
                 </div>

@@ -174,7 +174,7 @@ export default function ProjectsShowcase() {
     return (
         <>
             <div className="project-body">
-                <div className="project-list">
+                <div className="project-list" data-reveal="left" suppressHydrationWarning>
                     {projects.map((p, i) => (
                         <button
                             key={p.id}
@@ -190,7 +190,7 @@ export default function ProjectsShowcase() {
                     ))}
                 </div>
 
-                <div className="project-detail">
+                <div className="project-detail" data-reveal="right" suppressHydrationWarning>
                     <div key={active.id} className="project-card-wrap">
                         <ActiveCard />
                     </div>

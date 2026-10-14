@@ -12,3 +12,124 @@
   pointer-events: none;
   stroke-width: 0.5;
 } */
+
+/* Scroll reveals only hide elements after JavaScript marks them as pending. */
+.reveal-pending {
+  opacity: 0;
+}
+
+[data-reveal="left"] {
+  --reveal-offset-x: 48px;
+}
+
+[data-reveal="right"] {
+  --reveal-offset-x: 48px;
+}
+
+[data-reveal="up"] {
+  --reveal-offset-y: 40px;
+}
+
+[data-reveal="down"] {
+  --reveal-offset-y: 40px;
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--reveal-offset-x) * -1));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(var(--reveal-offset-x));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-offset-y));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-down {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--reveal-offset-y) * -1));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+[data-reveal="left"].reveal-visible {
+  animation: reveal-left 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+[data-reveal="right"].reveal-visible {
+  animation: reveal-right 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+[data-reveal="up"].reveal-visible {
+  animation: reveal-up 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+[data-reveal="down"].reveal-visible {
+  animation: reveal-down 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+[data-reveal="fade"].reveal-visible {
+  animation: reveal-fade 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+@media (max-width: 600px) {
+  [data-reveal="left"],
+  [data-reveal="right"] {
+    --reveal-offset-x: 24px;
+  }
+
+  [data-reveal="up"],
+  [data-reveal="down"] {
+    --reveal-offset-y: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    animation: none !important;
+  }
+
+  .reveal-pending {
+    opacity: 1;
+  }
+}

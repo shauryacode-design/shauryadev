@@ -21,12 +21,14 @@ export default function Orbit() {
                 
             </div>
             <div className="whole-orbit">
-                <div className="orbit-left-text">
+                <div className="orbit-left-text" data-reveal="left" suppressHydrationWarning>
                     <h1>From interfaces to <span className="blur-text expertise-text">intelligent</span> systems, here's what i build with. <span className="blur-text expertise-text">AI products.</span></h1>
                     <p>Hover or tap a dot to see what’s inside.</p>
                 </div>
                 <div
                     className={`orbit ${active !== null ? "paused" : ""}`}
+                    data-reveal="right"
+                    suppressHydrationWarning
                     onMouseLeave={() => setActive(null)}
                 >
                     {/* centre card: shows the hovered dot's details */}
